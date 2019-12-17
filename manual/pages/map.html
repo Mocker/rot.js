@@ -1,6 +1,6 @@
 <h2>Map generation</h2>
 
-<p>There are several map generator tools in <code>rot.js</code>; they all share the same usage pattern. You first need to instantialize the proper <code>ROT.Map.*</code> 
+<p>There are several map generator tools in <strong>rot.js</strong>; they all share the same usage pattern. You first need to instantialize the proper <code>ROT.Map.*</code> 
 object and pass size (plus any additional relevant options) to its constructor; you can then call the main <code>create</code> method (repeatedly, if you want).</p>
 
 <p>This toolkit does not force usage of any particular memory structure to store the map data. Instead, the map creation process is <em>callback-based</em>: 
@@ -18,7 +18,7 @@ the map creator will call your function repeatedly and pass it the generated map
 <div class="example">
 var map = new ROT.Map.Arena(3, 3);
 var userCallback = function(x, y, value) {
-	SHOW("Value %s generated at [%s,%s]".format(value, x, y));
+	SHOW(ROT.Util.format("Value %s generated at [%s,%s]", value, x, y));
 }
 map.create(userCallback);
 </div>
